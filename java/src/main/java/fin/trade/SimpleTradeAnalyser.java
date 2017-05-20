@@ -26,7 +26,7 @@ public class SimpleTradeAnalyser implements TradeAnalyser {
                 .reduce((prev, next) -> next.getTimestamp() >= prev.getTimestamp() ? next : prev);
 
         if (!trade.isPresent())
-            throw new RuntimeException("product not traded");
+            throw new RuntimeException("Latest price not known for product: " + product);
 
         return trade.get().getPrice();
     }
