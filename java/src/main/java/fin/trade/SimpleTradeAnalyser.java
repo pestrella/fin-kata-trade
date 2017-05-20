@@ -37,6 +37,6 @@ public class SimpleTradeAnalyser implements TradeAnalyser {
                 .mapToInt(Trade::getVolume)
                 .sum();
 
-        return (total == 0) ? 0 : total / trades.size();
+        return (trades.size() != 0) ? total / trades.size() : 0;
     }
 }
