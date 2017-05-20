@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
 
+/* O(n) read performance */
 public class SimpleTradeAnalyser implements TradeAnalyser {
     private ConcurrentHashMap<String, List<Trade>> trades;
 
